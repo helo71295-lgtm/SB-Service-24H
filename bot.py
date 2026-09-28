@@ -100,8 +100,8 @@ if __name__ == "__main__":
         BotCommand("help", "Get help using the bot")
     ])
     
-    # Clear any old updates/pending messages
-    bot.remove_webhook(drop_pending_updates=True)
+    # Clear active webhook without arguments
+    bot.remove_webhook()
     
     print("SB Service 24h Bot is active and running...")
     bot.infinity_polling()
